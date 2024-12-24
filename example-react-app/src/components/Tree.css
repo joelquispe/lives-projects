@@ -1,0 +1,188 @@
+/* Contenedor principal */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #002b56, #001021);
+  color: white;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+}
+
+/* Papá Noel */
+.santa {
+  position: absolute;
+  top: 5%;
+  left: -20%;
+  font-size: 2.5rem;
+  animation: fly 12s linear infinite;
+  display: flex;
+  align-items: center;
+}
+
+.sleigh {
+  margin-left: 10px;
+}
+
+/* Animación de Papá Noel */
+@keyframes fly {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(150vw);
+  }
+}
+
+/* Árbol de Navidad */
+.tree-container {
+  margin-top: 20px;
+}
+
+.star {
+  font-size: 3rem;
+  color: gold;
+  animation: sparkle 2s infinite;
+  margin-bottom: -10px;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(1);
+    color: #ffeb3b;
+  }
+  50% {
+    transform: scale(1.3);
+    color: #ffe000;
+  }
+}
+
+.tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Capas del árbol */
+.layer {
+  background: linear-gradient(to right, #1a7300, #00ff00);
+  border-radius: 5px;
+  margin: 5px 0;
+  position: relative;
+  text-align: center; /* Asegura la alineación */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); /* Realismo con sombras */
+}
+
+
+.layer1 {
+  width: 50px;
+  height: 30px;
+}
+
+.layer2 {
+  width: 80px;
+  height: 30px;
+}
+
+.layer3 {
+  width: 110px;
+  height: 30px;
+}
+
+.layer4 {
+  width: 140px;
+  height: 30px;
+}
+
+.layer5 {
+  width: 170px;
+  height: 30px;
+}
+
+/* Base del árbol */
+.tree-base {
+  background: #8b4513; /* Color marrón */
+  width: 170px; /* Ahora es más ancho y consistente con el árbol */
+  height: 40px; /* Un poco más alta */
+  border-radius: 3px; /* Suaviza los bordes */
+  margin-top: 10px; /* Espaciado desde la última capa */
+  box-shadow: inset 0px -3px 0px #5a2d0c; /* Agrega un efecto para mayor realismo */
+}
+
+
+/* Luces parpadeantes */
+.light {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: twinkle 1.5s infinite alternate;
+}
+
+.light1 {
+  background: red;
+  animation-delay: 0.2s;
+}
+
+.light2 {
+  background: yellow;
+  animation-delay: 0.4s;
+}
+
+.light3 {
+  background: blue;
+  animation-delay: 0.6s;
+}
+
+.layer .light1 {
+  top: 5px;
+  left: 10%;
+}
+
+.layer .light2 {
+  top: 5px;
+  left: 50%;
+}
+
+.layer .light3 {
+  top: 5px;
+  left: 80%;
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Mensaje navideño */
+.message {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  animation: fadeIn 3s ease-out;
+}
+
+.message strong {
+  font-size: 1.5rem;
+  color: #ffeb3b;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

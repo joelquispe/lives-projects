@@ -1,0 +1,151 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background: linear-gradient(to bottom, #00823a, #001021);
+}
+
+
+
+.card-tree{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.santa{
+  position: absolute;
+  top: 10px;
+  left: -20%;
+  display: flex;
+  gap: 8px;
+  font-size: 22px;
+  animation: fly 12s linear infinite;
+}
+
+@keyframes fly{
+  0%{
+    transform: translateX(120vw);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+.tree-container{
+  text-align: center;
+}
+
+.tree{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.star{
+  color: yellow;
+  font-size: 50px;
+  margin-bottom: 5px;
+  animation:  sparkle 2s infinite;
+}
+
+@keyframes sparkle{
+  0%, 100%{
+    transform: scale(1);
+    color: #ffeb3b;
+  }
+  50%{
+    transform: scale(1.3);
+    color: #ffe000;
+  }
+}
+
+.layer{
+  border-radius: 10px;
+  background: linear-gradient(to right, #1a7300, #00ff00);
+  margin: 5px 0px;
+  box-shadow: 0px 4px 4px black;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.layer1{
+  width: 50px;
+}
+
+.layer2{
+  width: 80px;
+}
+.layer3{
+  width: 110px;
+}
+.layer4{
+  width: 140px;
+}
+.layer5{
+  width: 170px;
+}
+
+.light{
+  border-radius: 25px;
+  width: 10px;
+  height: 10px;
+  animation: twinkle 1s infinite alternate;
+}
+
+@keyframes twinkle{
+  from{
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.light1{
+  background-color: red ;
+}
+
+.light2{
+  background-color: yellow ;
+}
+.light3{
+  background-color: blue;
+}
+
+
+.tree-base{
+  border-radius: 10px;
+  background: #8b4513;
+  margin-top: 5px;
+  height: 35px;
+  box-shadow: 0px 4px 4px black;
+}
+
+.message{
+  text-align: center;
+}
+
+.message-title{
+  font-size: 22px;
+  font-weight: 900;
+  color: yellow;
+  margin: 15px 0px;
+}
+
+.message-subtitle{
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+}
